@@ -1,4 +1,4 @@
-// This file was generated AUTOMATICALLY from a template file Fri Jan 29 17:41:47 PST 2016
+// This file was generated AUTOMATICALLY from a template file Sun Mar 20 22:02:34 PDT 2016
 /*
  * Copyright (c) 2003, 2013, Oracle and/or its affiliates. All rights reserved.
  * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
@@ -241,7 +241,7 @@ class CharacterData0E extends CharacterData {
     private CharacterData0E() {};
 
     // The following tables and code generated using:
-  // java GenerateCharacter -plane 14 -template /HUDSON3/workspace/8-2-build-linux-amd64/jdk8u73/6086/jdk/make/data/characterdata/CharacterData0E.java.template -spec /HUDSON3/workspace/8-2-build-linux-amd64/jdk8u73/6086/jdk/make/data/unicodedata/UnicodeData.txt -specialcasing /HUDSON3/workspace/8-2-build-linux-amd64/jdk8u73/6086/jdk/make/data/unicodedata/SpecialCasing.txt -proplist /HUDSON3/workspace/8-2-build-linux-amd64/jdk8u73/6086/jdk/make/data/unicodedata/PropList.txt -o /HUDSON3/workspace/8-2-build-linux-amd64/jdk8u73/6086/build/linux-amd64/jdk/gensrc/java/lang/CharacterData0E.java -string -usecharforbyte 11 4 1
+  // java GenerateCharacter -plane 14 -template /HUDSON/workspace/8-2-build-linux-amd64/jdk8u77/6540/jdk/make/data/characterdata/CharacterData0E.java.template -spec /HUDSON/workspace/8-2-build-linux-amd64/jdk8u77/6540/jdk/make/data/unicodedata/UnicodeData.txt -specialcasing /HUDSON/workspace/8-2-build-linux-amd64/jdk8u77/6540/jdk/make/data/unicodedata/SpecialCasing.txt -proplist /HUDSON/workspace/8-2-build-linux-amd64/jdk8u77/6540/jdk/make/data/unicodedata/PropList.txt -o /HUDSON/workspace/8-2-build-linux-amd64/jdk8u77/6540/build/linux-amd64/jdk/gensrc/java/lang/CharacterData0E.java -string -usecharforbyte 11 4 1
   // The X table has 2048 entries for a total of 4096 bytes.
 
   static final char X[] = (

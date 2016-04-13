@@ -182,26 +182,26 @@ final class ProgressBarPainter extends AbstractRegionPainter {
         path = decodePath2();
         g.setPaint(color17);
         g.fill(path);
-        rect = decodeRect1();
+        rect = decodeRect5();
         g.setPaint(decodeGradient5(rect));
         g.fill(rect);
-        rect = decodeRect2();
+        rect = decodeRect6();
         g.setPaint(decodeGradient6(rect));
         g.fill(rect);
 
     }
 
     private void paintForegroundEnabledAndIndeterminate(Graphics2D g) {
-        rect = decodeRect5();
+        rect = decodeRect7();
         g.setPaint(decodeGradient7(rect));
         g.fill(rect);
         path = decodePath3();
         g.setPaint(decodeGradient8(path));
         g.fill(path);
-        rect = decodeRect6();
+        rect = decodeRect8();
         g.setPaint(color31);
         g.fill(rect);
-        rect = decodeRect7();
+        rect = decodeRect9();
         g.setPaint(color32);
         g.fill(rect);
 
@@ -224,17 +224,17 @@ final class ProgressBarPainter extends AbstractRegionPainter {
         path = decodePath4();
         g.setPaint(color33);
         g.fill(path);
-        rect = decodeRect1();
+        rect = decodeRect5();
         g.setPaint(decodeGradient9(rect));
         g.fill(rect);
-        rect = decodeRect2();
+        rect = decodeRect6();
         g.setPaint(decodeGradient10(rect));
         g.fill(rect);
 
     }
 
     private void paintForegroundDisabledAndIndeterminate(Graphics2D g) {
-        rect = decodeRect5();
+        rect = decodeRect7();
         g.setPaint(decodeGradient11(rect));
         g.fill(rect);
         path = decodePath5();
@@ -263,55 +263,71 @@ final class ProgressBarPainter extends AbstractRegionPainter {
 
     private Path2D decodePath1() {
         path.reset();
-        path.moveTo(decodeX(0.6f), decodeY(0.12666667f));
-        path.curveTo(decodeAnchorX(0.6000000238418579f, -2.0f), decodeAnchorY(0.12666666507720947f, 0.0f), decodeAnchorX(0.12666666507720947f, 0.0f), decodeAnchorY(0.6000000238418579f, -2.0f), decodeX(0.12666667f), decodeY(0.6f));
-        path.curveTo(decodeAnchorX(0.12666666507720947f, 0.0f), decodeAnchorY(0.6000000238418579f, 2.0f), decodeAnchorX(0.12666666507720947f, 0.0f), decodeAnchorY(2.4000000953674316f, -2.0f), decodeX(0.12666667f), decodeY(2.4f));
-        path.curveTo(decodeAnchorX(0.12666666507720947f, 0.0f), decodeAnchorY(2.4000000953674316f, 2.0f), decodeAnchorX(0.6000000238418579f, -2.0f), decodeAnchorY(2.8933334350585938f, 0.0f), decodeX(0.6f), decodeY(2.8933334f));
-        path.curveTo(decodeAnchorX(0.6000000238418579f, 2.0f), decodeAnchorY(2.8933334350585938f, 0.0f), decodeAnchorX(3.0f, 0.0f), decodeAnchorY(2.8933334350585938f, 0.0f), decodeX(3.0f), decodeY(2.8933334f));
-        path.lineTo(decodeX(3.0f), decodeY(2.6f));
-        path.lineTo(decodeX(0.4f), decodeY(2.6f));
-        path.lineTo(decodeX(0.4f), decodeY(0.4f));
-        path.lineTo(decodeX(3.0f), decodeY(0.4f));
-        path.lineTo(decodeX(3.0f), decodeY(0.120000005f));
-        path.curveTo(decodeAnchorX(3.0f, 0.0f), decodeAnchorY(0.12000000476837158f, 0.0f), decodeAnchorX(0.6000000238418579f, 2.0f), decodeAnchorY(0.12666666507720947f, 0.0f), decodeX(0.6f), decodeY(0.12666667f));
+        path.moveTo(decodeX(1.0f), decodeY(0.21111111f));
+        path.curveTo(decodeAnchorX(1.0f, -2.0f), decodeAnchorY(0.21111111342906952f, 0.0f), decodeAnchorX(0.21111111342906952f, 0.0f), decodeAnchorY(1.0f, -2.0f), decodeX(0.21111111f), decodeY(1.0f));
+        path.curveTo(decodeAnchorX(0.21111111342906952f, 0.0f), decodeAnchorY(1.0f, 2.0f), decodeAnchorX(0.21111111342906952f, 0.0f), decodeAnchorY(2.0f, -2.0f), decodeX(0.21111111f), decodeY(2.0f));
+        path.curveTo(decodeAnchorX(0.21111111342906952f, 0.0f), decodeAnchorY(2.0f, 2.0f), decodeAnchorX(1.0f, -2.0f), decodeAnchorY(2.8222224712371826f, 0.0f), decodeX(1.0f), decodeY(2.8222225f));
+        path.curveTo(decodeAnchorX(1.0f, 2.0f), decodeAnchorY(2.8222224712371826f, 0.0f), decodeAnchorX(3.0f, 0.0f), decodeAnchorY(2.8222224712371826f, 0.0f), decodeX(3.0f), decodeY(2.8222225f));
+        path.lineTo(decodeX(3.0f), decodeY(2.3333333f));
+        path.lineTo(decodeX(0.6666667f), decodeY(2.3333333f));
+        path.lineTo(decodeX(0.6666667f), decodeY(0.6666667f));
+        path.lineTo(decodeX(3.0f), decodeY(0.6666667f));
+        path.lineTo(decodeX(3.0f), decodeY(0.2f));
+        path.curveTo(decodeAnchorX(3.0f, 0.0f), decodeAnchorY(0.20000000298023224f, 0.0f), decodeAnchorX(1.0f, 2.0f), decodeAnchorY(0.21111111342906952f, 0.0f), decodeX(1.0f), decodeY(0.21111111f));
         path.closePath();
         return path;
     }
 
     private Rectangle2D decodeRect3() {
-            rect.setRect(decodeX(0.4f), //x
-                         decodeY(0.4f), //y
-                         decodeX(3.0f) - decodeX(0.4f), //width
-                         decodeY(2.6f) - decodeY(0.4f)); //height
+            rect.setRect(decodeX(0.6666667f), //x
+                         decodeY(0.6666667f), //y
+                         decodeX(3.0f) - decodeX(0.6666667f), //width
+                         decodeY(2.3333333f) - decodeY(0.6666667f)); //height
         return rect;
     }
 
     private Rectangle2D decodeRect4() {
-            rect.setRect(decodeX(0.6f), //x
-                         decodeY(0.6f), //y
-                         decodeX(2.8f) - decodeX(0.6f), //width
-                         decodeY(2.4f) - decodeY(0.6f)); //height
+            rect.setRect(decodeX(1.0f), //x
+                         decodeY(1.0f), //y
+                         decodeX(2.6666667f) - decodeX(1.0f), //width
+                         decodeY(2.0f) - decodeY(1.0f)); //height
         return rect;
     }
 
     private Path2D decodePath2() {
         path.reset();
-        path.moveTo(decodeX(0.5466667f), decodeY(0.12666667f));
-        path.curveTo(decodeAnchorX(0.54666668176651f, -2.000000000000001f), decodeAnchorY(0.12666666507720947f, 0.0f), decodeAnchorX(0.12000000476837158f, 0.0f), decodeAnchorY(0.6066666841506958f, -1.9999999999999998f), decodeX(0.120000005f), decodeY(0.6066667f));
-        path.lineTo(decodeX(0.120000005f), decodeY(2.4266667f));
-        path.curveTo(decodeAnchorX(0.12000000476837158f, 0.0f), decodeAnchorY(2.426666736602783f, 2.0f), decodeAnchorX(0.5800000429153442f, -2.0f), decodeAnchorY(2.879999876022339f, 0.0f), decodeX(0.58000004f), decodeY(2.8799999f));
-        path.lineTo(decodeX(2.4f), decodeY(2.8733335f));
-        path.curveTo(decodeAnchorX(2.4000000953674316f, 1.9709292441265305f), decodeAnchorY(2.87333345413208f, 0.019857039365145823f), decodeAnchorX(2.866666793823242f, -0.03333333333333499f), decodeAnchorY(2.433333158493042f, 1.9333333333333869f), decodeX(2.8666668f), decodeY(2.4333332f));
-        path.lineTo(decodeX(2.8733335f), decodeY(1.9407407f));
-        path.lineTo(decodeX(2.8666668f), decodeY(1.1814815f));
-        path.lineTo(decodeX(2.8666668f), decodeY(0.6066667f));
-        path.curveTo(decodeAnchorX(2.866666793823242f, 0.0042173304174148996f), decodeAnchorY(0.6066666841506958f, -1.9503377583381705f), decodeAnchorX(2.4599997997283936f, 1.9659460194139413f), decodeAnchorY(0.13333334028720856f, 0.017122267221350018f), decodeX(2.4599998f), decodeY(0.13333334f));
-        path.lineTo(decodeX(0.5466667f), decodeY(0.12666667f));
+        path.moveTo(decodeX(0.9111111f), decodeY(0.21111111f));
+        path.curveTo(decodeAnchorX(0.9111111164093018f, -2.000000000000001f), decodeAnchorY(0.21111111342906952f, 0.0f), decodeAnchorX(0.20000000298023224f, 0.0f), decodeAnchorY(1.0025640726089478f, -1.9999999999999998f), decodeX(0.2f), decodeY(1.0025641f));
+        path.lineTo(decodeX(0.2f), decodeY(2.0444443f));
+        path.curveTo(decodeAnchorX(0.20000000298023224f, 0.0f), decodeAnchorY(2.0444443225860596f, 2.0f), decodeAnchorX(0.9666666984558105f, -2.0f), decodeAnchorY(2.799999952316284f, 0.0f), decodeX(0.9666667f), decodeY(2.8f));
+        path.lineTo(decodeX(2.0f), decodeY(2.788889f));
+        path.curveTo(decodeAnchorX(2.0f, 1.9709292441265305f), decodeAnchorY(2.788888931274414f, 0.019857039365145823f), decodeAnchorX(2.777777910232544f, -0.03333333333333499f), decodeAnchorY(2.0555553436279297f, 1.9333333333333869f), decodeX(2.777778f), decodeY(2.0555553f));
+        path.lineTo(decodeX(2.788889f), decodeY(1.8051281f));
+        path.lineTo(decodeX(2.777778f), decodeY(1.2794871f));
+        path.lineTo(decodeX(2.777778f), decodeY(1.0025641f));
+        path.curveTo(decodeAnchorX(2.777777910232544f, 0.0042173304174148996f), decodeAnchorY(1.0025640726089478f, -1.9503377583381705f), decodeAnchorX(2.0999996662139893f, 1.9659460194139413f), decodeAnchorY(0.2222222238779068f, 0.017122267221350018f), decodeX(2.0999997f), decodeY(0.22222222f));
+        path.lineTo(decodeX(0.9111111f), decodeY(0.21111111f));
         path.closePath();
         return path;
     }
 
     private Rectangle2D decodeRect5() {
+            rect.setRect(decodeX(0.6666667f), //x
+                         decodeY(0.6666667f), //y
+                         decodeX(2.3333333f) - decodeX(0.6666667f), //width
+                         decodeY(2.3333333f) - decodeY(0.6666667f)); //height
+        return rect;
+    }
+
+    private Rectangle2D decodeRect6() {
+            rect.setRect(decodeX(1.0f), //x
+                         decodeY(1.0f), //y
+                         decodeX(2.0f) - decodeX(1.0f), //width
+                         decodeY(2.0f) - decodeY(1.0f)); //height
+        return rect;
+    }
+
+    private Rectangle2D decodeRect7() {
             rect.setRect(decodeX(0.0f), //x
                          decodeY(0.0f), //y
                          decodeX(3.0f) - decodeX(0.0f), //width
@@ -321,67 +337,67 @@ final class ProgressBarPainter extends AbstractRegionPainter {
 
     private Path2D decodePath3() {
         path.reset();
-        path.moveTo(decodeX(0.0f), decodeY(1.3333334f));
-        path.curveTo(decodeAnchorX(0.0f, 2.678571428571433f), decodeAnchorY(1.3333333730697632f, 8.881784197001252E-16f), decodeAnchorX(1.3678570985794067f, -6.214285714285715f), decodeAnchorY(0.20714285969734192f, -0.03571428571428292f), decodeX(1.3678571f), decodeY(0.20714286f));
-        path.lineTo(decodeX(1.5642858f), decodeY(0.20714286f));
-        path.curveTo(decodeAnchorX(1.5642857551574707f, 8.329670329670357f), decodeAnchorY(0.20714285969734192f, 0.002747252747249629f), decodeAnchorX(2.5999999046325684f, -5.2857142857142705f), decodeAnchorY(1.3333333730697632f, 0.03571428571428559f), decodeX(2.6f), decodeY(1.3333334f));
-        path.lineTo(decodeX(3.0f), decodeY(1.3333334f));
-        path.lineTo(decodeX(3.0f), decodeY(1.6666667f));
-        path.lineTo(decodeX(2.6f), decodeY(1.6666667f));
-        path.curveTo(decodeAnchorX(2.5999999046325684f, -5.321428571428569f), decodeAnchorY(1.6666667461395264f, 0.0357142857142847f), decodeAnchorX(1.5642857551574707f, 8.983516483516496f), decodeAnchorY(2.799999952316284f, 0.03846153846153122f), decodeX(1.5642858f), decodeY(2.8f));
-        path.lineTo(decodeX(1.3892857f), decodeY(2.8f));
-        path.curveTo(decodeAnchorX(1.389285683631897f, -6.714285714285704f), decodeAnchorY(2.799999952316284f, 0.0f), decodeAnchorX(0.0f, 2.6071428571428568f), decodeAnchorY(1.6666667461395264f, 0.03571428571428559f), decodeX(0.0f), decodeY(1.6666667f));
-        path.lineTo(decodeX(0.0f), decodeY(1.3333334f));
+        path.moveTo(decodeX(0.0f), decodeY(1.4285715f));
+        path.curveTo(decodeAnchorX(0.0f, 2.678571428571433f), decodeAnchorY(1.4285714626312256f, 8.881784197001252E-16f), decodeAnchorX(1.389880895614624f, -6.214285714285715f), decodeAnchorY(0.3452380895614624f, -0.03571428571428292f), decodeX(1.3898809f), decodeY(0.3452381f));
+        path.lineTo(decodeX(1.5535715f), decodeY(0.3452381f));
+        path.curveTo(decodeAnchorX(1.5535714626312256f, 8.329670329670357f), decodeAnchorY(0.3452380895614624f, 0.002747252747249629f), decodeAnchorX(2.3333332538604736f, -5.2857142857142705f), decodeAnchorY(1.4285714626312256f, 0.03571428571428559f), decodeX(2.3333333f), decodeY(1.4285715f));
+        path.lineTo(decodeX(3.0f), decodeY(1.4285715f));
+        path.lineTo(decodeX(3.0f), decodeY(1.5714285f));
+        path.lineTo(decodeX(2.3333333f), decodeY(1.5714285f));
+        path.curveTo(decodeAnchorX(2.3333332538604736f, -5.321428571428569f), decodeAnchorY(1.5714285373687744f, 0.0357142857142847f), decodeAnchorX(1.5535714626312256f, 8.983516483516496f), decodeAnchorY(2.6666667461395264f, 0.03846153846153122f), decodeX(1.5535715f), decodeY(2.6666667f));
+        path.lineTo(decodeX(1.4077381f), decodeY(2.6666667f));
+        path.curveTo(decodeAnchorX(1.4077380895614624f, -6.714285714285704f), decodeAnchorY(2.6666667461395264f, 0.0f), decodeAnchorX(0.0f, 2.6071428571428568f), decodeAnchorY(1.5714285373687744f, 0.03571428571428559f), decodeX(0.0f), decodeY(1.5714285f));
+        path.lineTo(decodeX(0.0f), decodeY(1.4285715f));
         path.closePath();
         return path;
     }
 
-    private Rectangle2D decodeRect6() {
-            rect.setRect(decodeX(1.25f), //x
+    private Rectangle2D decodeRect8() {
+            rect.setRect(decodeX(1.2916666f), //x
                          decodeY(0.0f), //y
-                         decodeX(1.3f) - decodeX(1.25f), //width
+                         decodeX(1.3333334f) - decodeX(1.2916666f), //width
                          decodeY(3.0f) - decodeY(0.0f)); //height
         return rect;
     }
 
-    private Rectangle2D decodeRect7() {
-            rect.setRect(decodeX(1.75f), //x
+    private Rectangle2D decodeRect9() {
+            rect.setRect(decodeX(1.7083333f), //x
                          decodeY(0.0f), //y
-                         decodeX(1.8f) - decodeX(1.75f), //width
+                         decodeX(1.75f) - decodeX(1.7083333f), //width
                          decodeY(3.0f) - decodeY(0.0f)); //height
         return rect;
     }
 
     private Path2D decodePath4() {
         path.reset();
-        path.moveTo(decodeX(0.59333336f), decodeY(0.120000005f));
-        path.curveTo(decodeAnchorX(0.59333336353302f, -1.9999999999999993f), decodeAnchorY(0.12000000476837158f, 0.0f), decodeAnchorX(0.12000000476837158f, 0.0f), decodeAnchorY(0.59333336353302f, -2.000000000000001f), decodeX(0.120000005f), decodeY(0.59333336f));
-        path.curveTo(decodeAnchorX(0.12000000476837158f, 0.0f), decodeAnchorY(0.59333336353302f, 1.9999999999999991f), decodeAnchorX(0.12000000476837158f, 0.0f), decodeAnchorY(2.3933331966400146f, -2.0000000000000053f), decodeX(0.120000005f), decodeY(2.3933332f));
-        path.curveTo(decodeAnchorX(0.12000000476837158f, 0.0f), decodeAnchorY(2.3933331966400146f, 2.000000000000007f), decodeAnchorX(0.59333336353302f, -1.9999999999999993f), decodeAnchorY(2.8866665363311768f, 0.0f), decodeX(0.59333336f), decodeY(2.8866665f));
-        path.curveTo(decodeAnchorX(0.59333336353302f, 2.000000000000003f), decodeAnchorY(2.8866665363311768f, 0.0f), decodeAnchorX(2.700000047683716f, 0.0f), decodeAnchorY(2.879999876022339f, 0.0f), decodeX(2.7f), decodeY(2.8799999f));
-        path.lineTo(decodeX(2.8466668f), decodeY(2.6933334f));
-        path.lineTo(decodeX(2.8533332f), decodeY(1.6148149f));
-        path.lineTo(decodeX(2.86f), decodeY(1.4074074f));
-        path.lineTo(decodeX(2.86f), decodeY(0.37333333f));
-        path.lineTo(decodeX(2.7599998f), decodeY(0.13333334f));
-        path.curveTo(decodeAnchorX(2.7599997520446777f, 0.0f), decodeAnchorY(0.13333334028720856f, 0.0f), decodeAnchorX(0.59333336353302f, 2.000000000000003f), decodeAnchorY(0.12000000476837158f, 0.0f), decodeX(0.59333336f), decodeY(0.120000005f));
+        path.moveTo(decodeX(0.9888889f), decodeY(0.2f));
+        path.curveTo(decodeAnchorX(0.9888889193534851f, -1.9999999999999993f), decodeAnchorY(0.20000000298023224f, 0.0f), decodeAnchorX(0.20000000298023224f, 0.0f), decodeAnchorY(0.9888889193534851f, -2.000000000000001f), decodeX(0.2f), decodeY(0.9888889f));
+        path.curveTo(decodeAnchorX(0.20000000298023224f, 0.0f), decodeAnchorY(0.9888889193534851f, 1.9999999999999991f), decodeAnchorX(0.20000000298023224f, 0.0f), decodeAnchorY(1.9974358081817627f, -2.0000000000000053f), decodeX(0.2f), decodeY(1.9974358f));
+        path.curveTo(decodeAnchorX(0.20000000298023224f, 0.0f), decodeAnchorY(1.9974358081817627f, 2.000000000000007f), decodeAnchorX(0.9888889193534851f, -1.9999999999999993f), decodeAnchorY(2.811110734939575f, 0.0f), decodeX(0.9888889f), decodeY(2.8111107f));
+        path.curveTo(decodeAnchorX(0.9888889193534851f, 2.000000000000003f), decodeAnchorY(2.811110734939575f, 0.0f), decodeAnchorX(2.5f, 0.0f), decodeAnchorY(2.799999952316284f, 0.0f), decodeX(2.5f), decodeY(2.8f));
+        path.lineTo(decodeX(2.7444446f), decodeY(2.488889f));
+        path.lineTo(decodeX(2.7555554f), decodeY(1.5794872f));
+        path.lineTo(decodeX(2.7666664f), decodeY(1.4358975f));
+        path.lineTo(decodeX(2.7666664f), decodeY(0.62222224f));
+        path.lineTo(decodeX(2.5999997f), decodeY(0.22222222f));
+        path.curveTo(decodeAnchorX(2.5999996662139893f, 0.0f), decodeAnchorY(0.2222222238779068f, 0.0f), decodeAnchorX(0.9888889193534851f, 2.000000000000003f), decodeAnchorY(0.20000000298023224f, 0.0f), decodeX(0.9888889f), decodeY(0.2f));
         path.closePath();
         return path;
     }
 
     private Path2D decodePath5() {
         path.reset();
-        path.moveTo(decodeX(0.0f), decodeY(1.3333334f));
-        path.curveTo(decodeAnchorX(0.0f, 2.678571428571433f), decodeAnchorY(1.3333333730697632f, 8.881784197001252E-16f), decodeAnchorX(1.3678570985794067f, -6.357142857142872f), decodeAnchorY(0.20714285969734192f, -0.03571428571428337f), decodeX(1.3678571f), decodeY(0.20714286f));
-        path.lineTo(decodeX(1.5642858f), decodeY(0.20714286f));
-        path.curveTo(decodeAnchorX(1.5642857551574707f, 3.9999999999999964f), decodeAnchorY(0.20714285969734192f, 0.0f), decodeAnchorX(2.5999999046325684f, -5.2857142857142705f), decodeAnchorY(1.3333333730697632f, 0.03571428571428559f), decodeX(2.6f), decodeY(1.3333334f));
-        path.lineTo(decodeX(3.0f), decodeY(1.3333334f));
-        path.lineTo(decodeX(3.0f), decodeY(1.6666667f));
-        path.lineTo(decodeX(2.6f), decodeY(1.6666667f));
-        path.curveTo(decodeAnchorX(2.5999999046325684f, -5.321428571428569f), decodeAnchorY(1.6666667461395264f, 0.0357142857142847f), decodeAnchorX(1.5642857551574707f, 3.999999999999986f), decodeAnchorY(2.799999952316284f, 0.0f), decodeX(1.5642858f), decodeY(2.8f));
-        path.lineTo(decodeX(1.3892857f), decodeY(2.8f));
-        path.curveTo(decodeAnchorX(1.389285683631897f, -6.571428571428584f), decodeAnchorY(2.799999952316284f, -0.035714285714286476f), decodeAnchorX(0.0f, 2.6071428571428568f), decodeAnchorY(1.6666667461395264f, 0.03571428571428559f), decodeX(0.0f), decodeY(1.6666667f));
-        path.lineTo(decodeX(0.0f), decodeY(1.3333334f));
+        path.moveTo(decodeX(0.0f), decodeY(1.4285715f));
+        path.curveTo(decodeAnchorX(0.0f, 2.678571428571433f), decodeAnchorY(1.4285714626312256f, 8.881784197001252E-16f), decodeAnchorX(1.389880895614624f, -6.357142857142872f), decodeAnchorY(0.3452380895614624f, -0.03571428571428337f), decodeX(1.3898809f), decodeY(0.3452381f));
+        path.lineTo(decodeX(1.5535715f), decodeY(0.3452381f));
+        path.curveTo(decodeAnchorX(1.5535714626312256f, 3.9999999999999964f), decodeAnchorY(0.3452380895614624f, 0.0f), decodeAnchorX(2.3333332538604736f, -5.2857142857142705f), decodeAnchorY(1.4285714626312256f, 0.03571428571428559f), decodeX(2.3333333f), decodeY(1.4285715f));
+        path.lineTo(decodeX(3.0f), decodeY(1.4285715f));
+        path.lineTo(decodeX(3.0f), decodeY(1.5714285f));
+        path.lineTo(decodeX(2.3333333f), decodeY(1.5714285f));
+        path.curveTo(decodeAnchorX(2.3333332538604736f, -5.321428571428569f), decodeAnchorY(1.5714285373687744f, 0.0357142857142847f), decodeAnchorX(1.5535714626312256f, 3.999999999999986f), decodeAnchorY(2.6666667461395264f, 0.0f), decodeX(1.5535715f), decodeY(2.6666667f));
+        path.lineTo(decodeX(1.4077381f), decodeY(2.6666667f));
+        path.curveTo(decodeAnchorX(1.4077380895614624f, -6.571428571428584f), decodeAnchorY(2.6666667461395264f, -0.035714285714286476f), decodeAnchorX(0.0f, 2.6071428571428568f), decodeAnchorY(1.5714285373687744f, 0.03571428571428559f), decodeX(0.0f), decodeY(1.5714285f));
+        path.lineTo(decodeX(0.0f), decodeY(1.4285715f));
         path.closePath();
         return path;
     }

@@ -335,7 +335,7 @@ public class URLClassLoader extends SecureClassLoader implements Closeable {
     /**
      * Returns the search path of URLs for loading classes and resources.
      * This includes the original list of URLs specified to the constructor,
-     * along with any URLs subsequently appended by the laodURL() method.
+     * along with any URLs subsequently appended by the addURL() method.
      * @return the search path of URLs for loading classes and resources.
      */
     public URL[] getURLs() {

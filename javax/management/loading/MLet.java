@@ -423,7 +423,7 @@ public class MLet extends java.net.URLClassLoader
 
      /** Returns the search path of URLs for loading classes and resources.
       * This includes the original list of URLs specified to the constructor,
-      * along with any URLs subsequently appended by the load() method.
+      * along with any URLs subsequently appended by the addURL() method.
       */
      public URL[] getURLs() {
          return super.getURLs();

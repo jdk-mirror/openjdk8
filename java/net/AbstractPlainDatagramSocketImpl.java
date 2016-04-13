@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 1996, 2013, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 1996, 2015, Oracle and/or its affiliates. All rights reserved.
  * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  *
  *
@@ -68,7 +68,6 @@ abstract class AbstractPlainDatagramSocketImpl extends DatagramSocketImpl
                     return null;
                 }
             });
-        init();
     }
 
     /**
@@ -364,6 +363,5 @@ abstract class AbstractPlainDatagramSocketImpl extends DatagramSocketImpl
         return connectDisabled;
     }
 
-    native int dataAvailable();
-    private static native void init();
+    abstract int dataAvailable();
 }

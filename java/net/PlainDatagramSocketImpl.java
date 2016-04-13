@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2007,2011, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2007, 2015, Oracle and/or its affiliates. All rights reserved.
  * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  *
  *
@@ -118,6 +118,8 @@ class PlainDatagramSocketImpl extends AbstractPlainDatagramSocketImpl
     protected native void connect0(InetAddress address, int port) throws SocketException;
 
     protected native void disconnect0(int family);
+
+    native int dataAvailable();
 
     /**
      * Perform class load-time initializations.
